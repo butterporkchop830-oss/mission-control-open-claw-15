@@ -473,7 +473,7 @@
     font-size:10px; padding:2px 5px; border-radius:3px; margin-bottom:2px;
     white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
   }
-  .cal-event.vps { background:rgba(0,212,255,0.15); color:var(--accent); }
+  .cal-event.mac-a { background:rgba(0,212,255,0.15); color:var(--accent); }
   .cal-event.macb { background:rgba(167,139,250,0.15); color:var(--accent2); }
   .cal-event.maca { background:rgba(251,146,60,0.15); color:var(--accent3); }
 
@@ -550,7 +550,7 @@
   .meeting-msg-body { flex:1; }
   .meeting-msg-meta { display:flex; align-items:baseline; gap:8px; margin-bottom:4px; }
   .meeting-msg-name { font-size:12px; font-weight:700; }
-  .meeting-msg-name.vps { color:var(--accent); }
+  .meeting-msg-name.mac-a { color:var(--accent); }
   .meeting-msg-name.macb { color:var(--accent2); }
   .meeting-msg-name.maca { color:var(--accent3); }
   .meeting-msg-time { font-size:10px; color:var(--text-dim); }
@@ -560,7 +560,7 @@
     padding:9px 13px; font-size:12px; line-height:1.6; color:var(--text-mid);
     display:inline-block; max-width:100%;
   }
-  .meeting-msg.vps .meeting-msg-text { border-color:rgba(0,212,255,0.2); }
+  .meeting-msg.mac-a .meeting-msg-text { border-color:rgba(0,212,255,0.2); }
   .meeting-msg.macb .meeting-msg-text { border-color:rgba(167,139,250,0.2); }
   .meeting-msg.maca .meeting-msg-text { border-color:rgba(251,146,60,0.2); }
   .meeting-input-bar { padding:12px 16px; border-top:1px solid var(--border); display:flex; gap:8px; align-items:center; }
@@ -1111,7 +1111,7 @@
               <div class="attendee-row">
                 <div class="attendee-dot" style="background:var(--online);box-shadow:0 0 6px var(--online)"></div>
                 <div class="attendee-info">
-                  <div class="attendee-name">VPS — The Boss</div>
+                  <div class="attendee-name">Mac A (Control Center)</div>
                   <div class="attendee-role">Orchestrator</div>
                 </div>
                 <div class="attendee-model-tag tag-qwen">Qwen</div>
@@ -1268,7 +1268,7 @@
     <div class="activity-toolbar">
       <span style="font-size:11px;color:var(--text-dim);font-weight:600;">NODE:</span>
       <div class="activity-filter active" id="af-node-all"   onclick="setActivityNodeFilter('all',this)">All</div>
-      <div class="activity-filter"        id="af-node-VPS"   onclick="setActivityNodeFilter('VPS',this)">VPS</div>
+      <div class="activity-filter"        
       <div class="activity-filter"        id="af-node-MacA"  onclick="setActivityNodeFilter('Mac A',this)">Mac A</div>
       <div class="activity-filter"        id="af-node-MacB"  onclick="setActivityNodeFilter('Mac B',this)">Mac B</div>
       <div class="activity-filter"        id="af-node-sys"   onclick="setActivityNodeFilter('System',this)">System</div>
@@ -1495,7 +1495,7 @@
       <label>Target Nodes</label>
       <div style="display:flex;gap:16px;margin-top:6px;">
         <label style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text);cursor:pointer;">
-          <input type="checkbox" id="bc-vps" checked style="accent-color:var(--accent)"> 🖥️ VPS
+           🖥️ VPS
         </label>
         <label style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text);cursor:pointer;">
           <input type="checkbox" id="bc-maca" checked style="accent-color:var(--accent)"> 🛠️ Mac A
@@ -1560,7 +1560,7 @@ const MODELS = {
 };
 
 const NODES = {
-  vps:  { id:'vps',  name:'VPS',   fullName:'The Boss',        icon:'🖥️',  role:'Orchestrator',    ip:'100.69.83.7',  accentVar:'--accent'  },
+  mac-a: { id:'vps',  name:'Mac A',   fullName:'The Boss',        icon:'🖥️',  role:'Gateway',    ip:'100.69.83.7',  accentVar:'--accent'  },
   macb: { id:'macb', name:'Mac B', fullName:'Manager',         icon:'💼',  role:'Coordinator',     ip:'192.168.1.11', accentVar:'--accent2' },
   maca: { id:'maca', name:'Mac A', fullName:'Asst. Manager',   icon:'🛠️',  role:'Executor',        ip:'192.168.1.12', accentVar:'--accent3' },
 };
