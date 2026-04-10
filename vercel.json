@@ -1,19 +1,34 @@
 {
   "version": 2,
+  "name": "openclaw-mission-control",
   "builds": [
     {
       "src": "index.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "skills-index.json",
       "use": "@vercel/static"
     }
   ],
   "routes": [
     {
+      "src": "/skills-index.json",
+      "dest": "/skills-index.json"
+    },
+    {
       "src": "/(.*)",
-      "dest": "/$1"
+      "dest": "/index.html"
     }
   ],
-  "env": {
-    "SUPABASE_URL": "https://qpdomwahikxegfitumle.supabase.co",
-    "SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFwZG9td2FoaWt4ZWdnaXR1bWxlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQ3NDY1ODMsImV4cCI6MjA2MDMyMjU4M30.jK8vN2x5ZQ4wR7yP3mL6tN9sA1cD5eF8gH2iJ4kK6mL"
-  }
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }
+      ]
+    }
+  ]
 }
