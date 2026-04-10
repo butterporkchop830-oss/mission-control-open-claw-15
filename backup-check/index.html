@@ -929,7 +929,7 @@
 <!-- TAB BAR -->
 <div id="tab-bar">
   <button class="tab-btn active" onclick="switchTab('overview',this)">🏠 Overview</button>
-  <button class="tab-btn" onclick="switchTab('agents',this)">🤖 Agents <span class="tab-badge" id="badge-agents">40+</span></button>
+  <button class="tab-btn" onclick="switchTab('agents',this)">🤖 Agents <span class="tab-badge" id="badge-agents">0</span></button>
   <button class="tab-btn" onclick="switchTab('tasks',this)">✅ Tasks <span class="tab-badge" id="badge-tasks">0</span></button>
   <button class="tab-btn" onclick="switchTab('skills',this)">🧠 Skills <span class="tab-badge" id="badge-skills">0</span></button>
   <button class="tab-btn" onclick="switchTab('calendar',this)">📅 Calendar</button>
@@ -972,7 +972,7 @@
       <input type="text" id="agent-search" placeholder="🔍 Search agents…" oninput="renderAgents()"/>
       <select id="agent-filter-node" onchange="renderAgents()">
         <option value="all">All Nodes</option>
-        <option value="mac-a">🖥️ Mac A (Control Center)</option>
+        <option value="VPS">VPS — The Boss</option>
         <option value="MacB">Mac B — Manager</option>
         <option value="MacA">Mac A — Asst. Manager</option>
       </select>
@@ -1002,6 +1002,7 @@
       <input type="text" id="task-search" placeholder="Search tasks…" oninput="renderTasks()"/>
       <select id="task-filter-node" onchange="renderTasks()">
         <option value="all">All Nodes</option>
+        <option value="VPS">VPS (The Boss)</option>
         <option value="MacB">Mac B (Manager)</option>
         <option value="MacA">Mac A (Asst. Manager)</option>
       </select>
@@ -1095,7 +1096,7 @@
         <div class="meeting-msgs" id="meeting-msgs"></div>
         <div class="meeting-input-bar">
           <select class="meeting-as-select" id="meeting-as">
-            <option value="mac-a">🖥️ Mac A (Big T Bot)</option>
+            <option value="vps">🖥️ VPS</option>
             <option value="macb">💼 Mac B</option>
             <option value="maca">🛠️ Mac A</option>
           </select>
@@ -1371,6 +1372,7 @@
       <div class="modal-field">
         <label>Assign to Node</label>
         <select id="spawn-node">
+          <option value="VPS">🖥️ VPS — The Boss</option>
           <option value="MacB">💼 Mac B — Manager</option>
           <option value="MacA">🛠️ Mac A — Asst. Manager</option>
         </select>
@@ -1422,6 +1424,7 @@
     <div class="modal-field">
       <label>Assign to Node</label>
       <select id="new-task-node">
+        <option value="VPS">🖥️ VPS — The Boss</option>
         <option value="MacB">💼 Mac B — Manager</option>
         <option value="MacA">🛠️ Mac A — Asst. Manager</option>
       </select>
@@ -1469,7 +1472,7 @@
     <div class="modal-field">
       <label>Node</label>
       <select id="new-event-node">
-        <option value="mac-a">🖥️ Mac A (Big T Bot)</option>
+        <option value="vps">🖥️ VPS</option>
         <option value="macb">💼 Mac B</option>
         <option value="maca">🛠️ Mac A</option>
       </select>
