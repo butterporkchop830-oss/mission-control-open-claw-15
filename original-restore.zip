@@ -972,7 +972,7 @@
       <input type="text" id="agent-search" placeholder="🔍 Search agents…" oninput="renderAgents()"/>
       <select id="agent-filter-node" onchange="renderAgents()">
         <option value="all">All Nodes</option>
-        <option value="mac-a">🖥️ Mac A (Control Center)</option>
+        <option value="VPS">VPS — The Boss</option>
         <option value="MacB">Mac B — Manager</option>
         <option value="MacA">Mac A — Asst. Manager</option>
       </select>
@@ -1269,7 +1269,7 @@
     <div class="activity-toolbar">
       <span style="font-size:11px;color:var(--text-dim);font-weight:600;">NODE:</span>
       <div class="activity-filter active" id="af-node-all"   onclick="setActivityNodeFilter('all',this)">All</div>
-      <div class="activity-filter"        
+      <div class="activity-filter"        id="af-node-VPS"   onclick="setActivityNodeFilter('VPS',this)">VPS</div>
       <div class="activity-filter"        id="af-node-MacA"  onclick="setActivityNodeFilter('Mac A',this)">Mac A</div>
       <div class="activity-filter"        id="af-node-MacB"  onclick="setActivityNodeFilter('Mac B',this)">Mac B</div>
       <div class="activity-filter"        id="af-node-sys"   onclick="setActivityNodeFilter('System',this)">System</div>
@@ -1498,7 +1498,7 @@
       <label>Target Nodes</label>
       <div style="display:flex;gap:16px;margin-top:6px;">
         <label style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text);cursor:pointer;">
-           🖥️ VPS
+          <input type="checkbox" id="bc-vps" checked style="accent-color:var(--accent)"> 🖥️ VPS
         </label>
         <label style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text);cursor:pointer;">
           <input type="checkbox" id="bc-maca" checked style="accent-color:var(--accent)"> 🛠️ Mac A
@@ -1563,7 +1563,7 @@ const MODELS = {
 };
 
 const NODES = {
-  mac-a: { id:'mac-a',  name:'Mac A',   fullName:'Mac A - Control Center',        icon:'🖥️',  role:'Orchestrator',  ip:'100.108.79.28',    ip:'100.69.83.7',  accentVar:'--accent'  },
+  vps:  { id:'vps',  name:'VPS',   fullName:'The Boss',        icon:'🖥️',  role:'Orchestrator',    ip:'100.69.83.7',  accentVar:'--accent'  },
   macb: { id:'macb', name:'Mac B', fullName:'Manager',         icon:'💼',  role:'Coordinator',     ip:'192.168.1.11', accentVar:'--accent2' },
   maca: { id:'maca', name:'Mac A', fullName:'Asst. Manager',   icon:'🛠️',  role:'Executor',        ip:'192.168.1.12', accentVar:'--accent3' },
 };

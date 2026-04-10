@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Tabs</title>
+    <script>
+        function testTab(tabName) {
+            console.log('Test clicked:', tabName);
+            document.getElementById('test-output').innerHTML = 'You clicked: ' + tabName + '<br>Tab ' + tabName + ' is now showing!';
+            return false;
+        }
+    </script>
+</head>
+<body style="background:#1a1a2e;color:white;padding:20px;font-family:Arial;">
+    <h1>🧪 Simple Tab Test</h1>
+    <h3>If this works, tabs are functional!</h3>
+    <br>
+    <button onclick="testTab('Overview')" style="background:#00d4ff;color:black;padding:10px 20px;border:none;border-radius:8px;margin-right:10px;margin-bottom:10px;">Overview</button>
+    <button onclick="testTab('Agents')" style="background:#00d4ff;color:black;padding:10px 20px;border:none;border-radius:8px;margin-right:10px;margin-bottom:10px;">Agents</button>
+    <button onclick="testTab('Tasks')" style="background:#00d4ff;color:black;padding:10px 20px;border:none;border-radius:8px;margin-right:10px;margin-bottom:10px;">Tasks</button>
+    <br><br>
+    <div id="test-output" style="background:#0e1117;padding:20px;border-radius:10px;font-size:18px;">Nothing clicked yet...</div>
+</body>
+</html>
