@@ -5,17 +5,9 @@
     {
       "src": "index.html",
       "use": "@vercel/static"
-    },
-    {
-      "src": "skills-index.json",
-      "use": "@vercel/static"
     }
   ],
   "routes": [
-    {
-      "src": "/skills-index.json",
-      "dest": "/skills-index.json"
-    },
     {
       "src": "/(.*)",
       "dest": "/index.html"
@@ -32,4 +24,3 @@
     }
   ]
 }
-clear=cache
